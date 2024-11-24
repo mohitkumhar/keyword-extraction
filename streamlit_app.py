@@ -10,6 +10,7 @@ import string
 # Load required NLTK resources
 nltk.download('stopwords')
 nltk.download('punkt')
+nltk.download('punkt_tab')
 
 # Load pre-trained models and data
 cv = pickle.load(open('count_vectorizer.pkl', 'rb'))
