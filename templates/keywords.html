@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+
+    <title>Extracted Keywords</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 500px;
+            margin-top: 50px;
+            background:black;
+            color: white;
+            padding-top:3%;
+            padding-bottom:3%;
+            padding-left:5%;
+            padding-right:5%;
+            border-radius:15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center">Extracted Keywords</h1>
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th>Keywords</th>
+                    <th>score</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {% for keyword, score in keywords.items() %}
+                <tr>
+                    <td> {{keyword}} </td>
+                    <td> {{score}} </td>
+                </tr>
+                
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
